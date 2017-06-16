@@ -15,12 +15,8 @@ import java.util.List;
 
 public class GenericJPARepositoryImpl<Entity, PrimaryKey> implements GenericRepository<Entity, PrimaryKey> {
 
-	@Autowired
-	private SessionFactory sessionFactory;
-
-	protected Session getSession() {
-		return this.sessionFactory.getCurrentSession();
-	}
+	@PersistenceContext
+	protected EntityManager entityManager;
 
 	private Class<Entity> entity;
 
@@ -31,7 +27,7 @@ public class GenericJPARepositoryImpl<Entity, PrimaryKey> implements GenericRepo
 	@Override
 	public Entity save(Entity entity) throws RepositoryException {
 		try {
-			getSession().save(entity);
+			entityManager.persist(entity);
 		} catch (PersistenceException exception) {
 			throw new RepositoryException(exception.getMessage(), exception);
 		}
@@ -41,7 +37,7 @@ public class GenericJPARepositoryImpl<Entity, PrimaryKey> implements GenericRepo
 	@Override
 	public Entity update(Entity entity) throws RepositoryException {
 		try {
-			getSession().merge(entity);
+			entityManager.merge(entity);
 		} catch (PersistenceException exception) {
 			throw new RepositoryException(exception.getMessage(), exception);
 		}
@@ -52,7 +48,7 @@ public class GenericJPARepositoryImpl<Entity, PrimaryKey> implements GenericRepo
 	@Override
 	public void remove(Entity entity) throws RepositoryException {
 		try {
-			getSession().remove(entity);
+			entityManager.remove(entity);
 		} catch (PersistenceException exception) {
 			throw new RepositoryException(exception.getMessage(), exception);
 		}
@@ -61,7 +57,7 @@ public class GenericJPARepositoryImpl<Entity, PrimaryKey> implements GenericRepo
 	@Override
 	public void removeById(PrimaryKey id) throws RepositoryException {
 		try {
-			getSession().createQuery("delete from " + entity.getSimpleName() + " where id=" + id).executeUpdate();
+			entityManager.createQuery("delete from " + entity.getSimpleName() + " where id=" + id).executeUpdate();
 		} catch (PersistenceException exception) {
 			throw new RepositoryException(exception.getMessage(), exception);
 		}
@@ -71,7 +67,7 @@ public class GenericJPARepositoryImpl<Entity, PrimaryKey> implements GenericRepo
 	@Override
 	public Entity findOne(PrimaryKey id) throws RepositoryException {
 		try {
-			return getSession().find(entity, id);
+			return entityManager.find(entity, id);
 		} catch (PersistenceException exception) {
 			throw new RepositoryException(exception.getMessage(), exception);
 		}
@@ -80,7 +76,7 @@ public class GenericJPARepositoryImpl<Entity, PrimaryKey> implements GenericRepo
 	@Override
 	public List<Entity> findAll() throws RepositoryException {
 		try {
-			TypedQuery<Entity> query = getSession().createQuery("select t from " + entity.getSimpleName() + " t", entity);
+			TypedQuery<Entity> query = entityManager.createQuery("select t from " + entity.getSimpleName() + " t", entity);
 			return query.getResultList();
 		} catch (PersistenceException exception) {
 			throw new RepositoryException(exception.getMessage(), exception);

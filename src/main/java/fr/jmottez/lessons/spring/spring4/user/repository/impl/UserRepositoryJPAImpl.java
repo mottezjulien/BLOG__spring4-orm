@@ -13,10 +13,7 @@ import javax.persistence.Query;
 @Repository
 public class UserRepositoryJPAImpl extends GenericJPARepositoryImpl<UserEntity, Integer> implements UserRepository {
 
-	@PersistenceContext
-	private EntityManager entityManager;
-
-	public UserRepositoryJPAImpl() {
+		public UserRepositoryJPAImpl() {
 		super(UserEntity.class);
 	}
 
