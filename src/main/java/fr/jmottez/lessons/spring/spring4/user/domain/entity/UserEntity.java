@@ -1,4 +1,4 @@
-package fr.jmottez.lessons.spring.spring4.user.repository.entity;
+package fr.jmottez.lessons.spring.spring4.user.domain.entity;
 
 import javax.persistence.*;
 

@@ -26,7 +26,21 @@ public class RunnerApplication {
 		userService.save(model1);
 
 		List<UserModel> users = userService.findAll();
-		users.stream().forEach(user -> System.out.println("user:" + user.getFirstName() + " " + user.getLastName()));
+		System.out.println("listing1");
+		users.stream().forEach(user -> System.out.println("user:" + user.getId() + " " + user.getFirstName() + " " + user.getLastName()));
+		users.clear();
+
+		UserModel findUser = userService.findById(2);
+		System.out.println("findUser:" + findUser.getId() + " " + findUser.getFirstName() + " " + findUser.getLastName());
+
+		userService.remove(findUser);
+
+
+		users = userService.findAll();
+		System.out.println("listing2");
+		users.stream().forEach(user -> System.out.println("user:" + user.getId() + " " + user.getFirstName() + " " + user.getLastName()));
+
+
 
 	}
 

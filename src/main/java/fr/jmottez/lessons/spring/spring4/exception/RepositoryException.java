@@ -1,4 +1,4 @@
-package fr.jmottez.lessons.spring.spring4.generic.repository;
+package fr.jmottez.lessons.spring.spring4.exception;
 
 public class RepositoryException extends RuntimeException {
 

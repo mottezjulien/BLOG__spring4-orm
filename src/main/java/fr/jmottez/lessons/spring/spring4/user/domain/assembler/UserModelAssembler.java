@@ -1,7 +1,7 @@
 package fr.jmottez.lessons.spring.spring4.user.domain.assembler;
 
 import fr.jmottez.lessons.spring.spring4.user.domain.model.UserModel;
-import fr.jmottez.lessons.spring.spring4.user.repository.entity.UserEntity;
+import fr.jmottez.lessons.spring.spring4.user.domain.entity.UserEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

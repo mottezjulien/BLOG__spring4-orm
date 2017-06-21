@@ -1,10 +1,7 @@
 package fr.jmottez.lessons.spring.spring4.generic.repository.impl;
 
 import fr.jmottez.lessons.spring.spring4.generic.repository.GenericRepository;
-import fr.jmottez.lessons.spring.spring4.generic.repository.RepositoryException;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import fr.jmottez.lessons.spring.spring4.exception.RepositoryException;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -61,11 +58,10 @@ public class GenericJPARepositoryImpl<Entity, PrimaryKey> implements GenericRepo
 		} catch (PersistenceException exception) {
 			throw new RepositoryException(exception.getMessage(), exception);
 		}
-
 	}
 
 	@Override
-	public Entity findOne(PrimaryKey id) throws RepositoryException {
+	public Entity findById(PrimaryKey id) throws RepositoryException {
 		try {
 			return entityManager.find(entity, id);
 		} catch (PersistenceException exception) {
