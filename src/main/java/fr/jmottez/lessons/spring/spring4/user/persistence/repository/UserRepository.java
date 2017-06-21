@@ -1,7 +1,7 @@
-package fr.jmottez.lessons.spring.spring4.user.repository;
+package fr.jmottez.lessons.spring.spring4.user.persistence.repository;
 
 import fr.jmottez.lessons.spring.spring4.generic.repository.GenericRepository;
-import fr.jmottez.lessons.spring.spring4.user.domain.entity.UserEntity;
+import fr.jmottez.lessons.spring.spring4.user.persistence.entity.UserEntity;
 import org.springframework.stereotype.Repository;
 
 @Repository
