@@ -31,4 +31,8 @@ public class UserModel {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
+    public String getFullName() {
+        return getLastName() + " " + getLastName();
+    }
 }
