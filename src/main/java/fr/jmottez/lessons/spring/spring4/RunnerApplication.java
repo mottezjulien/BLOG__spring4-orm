@@ -35,12 +35,9 @@ public class RunnerApplication {
 
 		userService.remove(findUser);
 
-
 		users = userService.findAll();
 		System.out.println("listing2");
 		users.stream().forEach(user -> System.out.println("user:" + user.getId() + " " + user.getFirstName() + " " + user.getLastName()));
-
-
 
 	}
 

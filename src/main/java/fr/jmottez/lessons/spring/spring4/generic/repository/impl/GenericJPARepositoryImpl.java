@@ -32,29 +32,9 @@ public class GenericJPARepositoryImpl<Entity, PrimaryKey> implements GenericRepo
 	}
 
 	@Override
-	public Entity update(Entity entity) throws RepositoryException {
-		try {
-			entityManager.merge(entity);
-		} catch (PersistenceException exception) {
-			throw new RepositoryException(exception.getMessage(), exception);
-		}
-
-		return entity;
-	}
-
-	@Override
 	public void remove(Entity entity) throws RepositoryException {
 		try {
 			entityManager.remove(entity);
-		} catch (PersistenceException exception) {
-			throw new RepositoryException(exception.getMessage(), exception);
-		}
-	}
-
-	@Override
-	public void removeById(PrimaryKey id) throws RepositoryException {
-		try {
-			entityManager.createQuery("delete from " + entity.getSimpleName() + " where id=" + id).executeUpdate();
 		} catch (PersistenceException exception) {
 			throw new RepositoryException(exception.getMessage(), exception);
 		}
