@@ -1,6 +1,6 @@
-package fr.jmottez.lessons.spring.spring4.generic.repository.impl;
+package fr.jmottez.lessons.spring.spring4.generic.persistence.repository.impl;
 
-import fr.jmottez.lessons.spring.spring4.generic.repository.GenericRepository;
+import fr.jmottez.lessons.spring.spring4.generic.persistence.repository.GenericRepository;
 import fr.jmottez.lessons.spring.spring4.exception.RepositoryException;
 
 import javax.persistence.EntityManager;
