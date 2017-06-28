@@ -1,7 +1,7 @@
 package fr.jmottez.lessons.spring.spring4.user.service;
 
-import fr.jmottez.lessons.spring.spring4.exception.ServiceException;
-import fr.jmottez.lessons.spring.spring4.exception.RepositoryException;
+import fr.jmottez.lessons.spring.spring4.infrastructure.exception.ServiceException;
+import fr.jmottez.lessons.spring.spring4.infrastructure.exception.RepositoryException;
 import fr.jmottez.lessons.spring.spring4.user.domain.assembler.UserModelAssembler;
 import fr.jmottez.lessons.spring.spring4.user.domain.model.UserModel;
 import fr.jmottez.lessons.spring.spring4.user.persistence.repository.UserRepository;
