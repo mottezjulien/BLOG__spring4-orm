@@ -4,4 +4,4 @@ On va mettre en place un Object-Relational Mapping (ORM) avec Spring 4 et Maven.
 
 L’objectif est de construire un service complet qui permet de gérer des utilisateurs (user) en base de donnée: Il faut que l’on puisse créer, modifier, supprimer, lister et rechercher des utilisateurs.
 
-Pour plus d'info: http://www.la-pause-dev.fr/archives/148
+Pour plus d'info: http://www.la-pause-dev.fr/page.html?page=207
