@@ -1,6 +1,6 @@
-package fr.jmottez.lessons.spring.spring4.infrastructure.persistence.repository;
+package fr.lapausedev.spring.infrastructure.persistence.repository;
 
-import fr.jmottez.lessons.spring.spring4.infrastructure.exception.RepositoryException;
+import fr.lapausedev.spring.infrastructure.exception.RepositoryException;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package fr.jmottez.lessons.spring.spring4.user.persistence.entity;
+package fr.lapausedev.spring.user.persistence.entity;
 
 import javax.persistence.*;
 

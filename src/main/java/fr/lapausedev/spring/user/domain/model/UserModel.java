@@ -1,4 +1,4 @@
-package fr.jmottez.lessons.spring.spring4.user.domain.model;
+package fr.lapausedev.spring.user.domain.model;
 
 public class UserModel {
 

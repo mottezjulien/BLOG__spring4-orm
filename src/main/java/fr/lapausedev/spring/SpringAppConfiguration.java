@@ -1,4 +1,4 @@
-package fr.jmottez.lessons.spring.spring4;
+package fr.lapausedev.spring;
 
 import org.hibernate.cfg.AvailableSettings;
 import org.springframework.context.annotation.Bean;
@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@ComponentScan(basePackages = "fr.jmottez.lessons.spring.spring4")
+@ComponentScan(basePackages = "fr.lapausedev.spring")
 @EnableTransactionManagement
 public class SpringAppConfiguration {
 
@@ -31,7 +31,7 @@ public class SpringAppConfiguration {
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
 		entityManagerFactoryBean.setDataSource(dataSource());
-		entityManagerFactoryBean.setPackagesToScan("fr.jmottez.lessons.spring.spring4");
+		entityManagerFactoryBean.setPackagesToScan("fr.lapausedev.spring");
 		entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 		entityManagerFactoryBean.setJpaProperties(jpaProperties());
 		return entityManagerFactoryBean;

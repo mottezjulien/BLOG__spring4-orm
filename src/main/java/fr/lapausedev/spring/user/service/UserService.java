@@ -1,11 +1,11 @@
-package fr.jmottez.lessons.spring.spring4.user.service;
+package fr.lapausedev.spring.user.service;
 
-import fr.jmottez.lessons.spring.spring4.infrastructure.exception.ServiceException;
-import fr.jmottez.lessons.spring.spring4.infrastructure.exception.RepositoryException;
-import fr.jmottez.lessons.spring.spring4.user.domain.assembler.UserModelAssembler;
-import fr.jmottez.lessons.spring.spring4.user.domain.model.UserModel;
-import fr.jmottez.lessons.spring.spring4.user.persistence.repository.UserRepository;
-import fr.jmottez.lessons.spring.spring4.user.persistence.entity.UserEntity;
+import fr.lapausedev.spring.infrastructure.exception.ServiceException;
+import fr.lapausedev.spring.infrastructure.exception.RepositoryException;
+import fr.lapausedev.spring.user.domain.assembler.UserModelAssembler;
+import fr.lapausedev.spring.user.domain.model.UserModel;
+import fr.lapausedev.spring.user.persistence.repository.UserRepository;
+import fr.lapausedev.spring.user.persistence.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

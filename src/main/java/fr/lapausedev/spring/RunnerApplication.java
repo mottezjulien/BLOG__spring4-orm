@@ -1,7 +1,7 @@
-package fr.jmottez.lessons.spring.spring4;
+package fr.lapausedev.spring;
 
-import fr.jmottez.lessons.spring.spring4.user.domain.model.UserModel;
-import fr.jmottez.lessons.spring.spring4.user.service.UserService;
+import fr.lapausedev.spring.user.domain.model.UserModel;
+import fr.lapausedev.spring.user.service.UserService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

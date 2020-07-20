@@ -1,7 +1,7 @@
-package fr.jmottez.lessons.spring.spring4.infrastructure.persistence.repository.impl;
+package fr.lapausedev.spring.infrastructure.persistence.repository.impl;
 
-import fr.jmottez.lessons.spring.spring4.infrastructure.persistence.repository.GenericRepository;
-import fr.jmottez.lessons.spring.spring4.infrastructure.exception.RepositoryException;
+import fr.lapausedev.spring.infrastructure.persistence.repository.GenericRepository;
+import fr.lapausedev.spring.infrastructure.exception.RepositoryException;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
